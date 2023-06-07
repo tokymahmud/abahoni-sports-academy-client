@@ -8,7 +8,7 @@ const Footer = () => {
     <a className="link link-hover">About us</a> 
     <a className="link link-hover">Contact</a> 
     <a className="link link-hover">Jobs</a> 
-    <a className="link link-hover">Press kit</a>
+    <a className="link link-hover">Call Now</a>
   </div> 
   <div>
     <div className="grid grid-flow-col gap-4">
@@ -18,6 +18,8 @@ const Footer = () => {
     </div>
   </div> 
   <div>
+    <p>Addres: Dhanmondi,Dhaka</p>
+
     <p>Copyright © 2023 - All right reserved by ABAHONI SPORTS ACADEMY</p>
   </div>
 </footer>
