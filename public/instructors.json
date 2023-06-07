@@ -1,0 +1,74 @@
+[
+    {
+      "_id": 1,
+      "image": "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?w=826&t=st=1686130760~exp=1686131360~hmac=7a7341c083e9cbcd88676aaee3f0ab5862e26c65aa36ec301ba8ec8ba231ff08",
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "numberOfClasses": 3,
+      "classesTaken": ["Yoga", "Pilates", "Zumba"],
+      "studentsInClasses": 37
+    },
+    {
+      "_id": 2,
+      "image": "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=996&t=st=1686130782~exp=1686131382~hmac=298517f134539b0692573a1af4805438069f4e52c7dd345c78e88e6fe7d4d404",
+      "name": "Sarah Johnson",
+      "email": "sarah.johnson@example.com",
+      "numberOfClasses": 2,
+      "classesTaken": ["Crossfit", "Kickboxing"],
+      "studentsInClasses": 27
+    },
+    {
+      "_id": 3,
+      "image": "https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg?w=996&t=st=1686130799~exp=1686131399~hmac=ce93ed3c86317e02b696d153a231c32fb626fb30d6b170b323c0be19c8f2ae69",
+      "name": "Michael Davis",
+      "email": "michael.davis@example.com",
+      "numberOfClasses": 1,
+      "classesTaken": ["Pilates"],
+      "studentsInClasses": 5
+    },
+    {
+      "_id": 4,
+      "image": "https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?w=996&t=st=1686130824~exp=1686131424~hmac=22ff8d24125b150c575f53ea84b430f9001d868a8a1adac837e9da18f81198b0",
+      "name": "Emily Thompson",
+      "email": "emily.thompson@example.com",
+      "numberOfClasses": 1,
+      "classesTaken": ["Zumba"],
+      "studentsInClasses": 10
+    },
+    {
+      "_id": 5,
+      "image": "https://img.freepik.com/free-photo/bohemian-man-with-his-arms-crossed_1368-3542.jpg?w=740&t=st=1686130851~exp=1686131451~hmac=4a4dda088e0bf3d0bf7e6e7dfcd8fa40c8a45c721c26222174d308798ef15fda",
+      "name": "David Anderson",
+      "email": "david.anderson@example.com",
+      "numberOfClasses": 1,
+      "classesTaken": ["Kickboxing"],
+      "studentsInClasses": 7
+    },
+    {
+      "_id": 6,
+      "image": "https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg?w=996&t=st=1686130799~exp=1686131399~hmac=ce93ed3c86317e02b696d153a231c32fb626fb30d6b170b323c0be19c8f2ae69",
+      "name": "Jessica Wilson",
+      "email": "jessica.wilson@example.com",
+      "numberOfClasses": 1,
+      "classesTaken": ["Swimming"],
+      "studentsInClasses": 20
+    },
+    {
+      "_id": 7,
+      "image": "https://img.freepik.com/free-photo/bohemian-man-with-his-arms-crossed_1368-3542.jpg?w=740&t=st=1686130851~exp=1686131451~hmac=4a4dda088e0bf3d0bf7e6e7dfcd8fa40c8a45c721c26222174d308798ef15fda",
+      "name": "Robert Martinez",
+      "email": "robert.martinez@example.com",
+      "numberOfClasses": 1,
+      "classesTaken": ["Cycling"],
+      "studentsInClasses": 14
+    },
+    {
+      "_id": 8,
+      "image": "https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?w=996&t=st=1686130824~exp=1686131424~hmac=22ff8d24125b150c575f53ea84b430f9001d868a8a1adac837e9da18f81198b0",
+      "name": "Michelle Lee",
+      "email": "michelle.lee@example.com",
+      "numberOfClasses": 1,
+      "classesTaken": ["Boxing"],
+      "studentsInClasses": 9
+    }
+  ]
