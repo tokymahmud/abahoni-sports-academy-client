@@ -8,8 +8,9 @@ const Navbar = () => {
       <Link to='/instructors'><button className="btn btn-active btn-neutral">Instructors</button></Link>
       <Link to='/classes'><button className="btn btn-active btn-neutral">Classes</button></Link>
       <Link to='/dashboard'><button className="btn btn-active btn-neutral">Dashboard</button></Link>
+      <Link to='/login'><button className="btn btn-active btn-neutral">Log In</button></Link>
     
-      <li><a>Item 3</a></li>
+      
 
     </>
     return (
@@ -33,9 +34,7 @@ const Navbar = () => {
     {navOptions}
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
-  </div>
+
 </div>
         </div>
     );

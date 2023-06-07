@@ -24,6 +24,9 @@ const Instructors = () => {
       <h3>Total Student:{instructor.studentsInClasses}</h3>
       
       <p>Students in Classes: {instructor.studentsInClasses}</p>
+      <div className="card-actions">
+      <button className="btn btn-primary">See Classes</button>
+    </div>
     </div>
   ))}
             </div>
