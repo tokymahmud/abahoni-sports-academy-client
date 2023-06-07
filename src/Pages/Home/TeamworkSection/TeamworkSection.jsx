@@ -1,9 +1,13 @@
 import React from 'react';
 import img3 from "../../../../public/img3.jpg";
+import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
 
 const TeamworkSection = () => {
     return (
-        <div>
+       <section>
+        <SectionTitle 
+        heading={"Join Regular Team "}></SectionTitle>
+         <div>
             <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:flex-row">
     <img src={img3} className="max-w-sm rounded-lg shadow-2xl" />
@@ -16,6 +20,7 @@ Teamwork Makes the Dream Work</h1>
   </div>
 </div>
         </div>
+       </section>
     );
 };
 
