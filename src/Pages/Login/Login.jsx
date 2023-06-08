@@ -1,11 +1,16 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
     const {singIn, singinWithGoogle} =useContext(AuthContext);
+    const [passwordVisible, setPasswordVisible] = useState(false);
+
     const navigate =useNavigate();
+    const handleTogglePassword = () => {
+        setPasswordVisible(!passwordVisible);
+      };
   
   
       const handleLogin =event =>{
@@ -56,7 +61,25 @@ const Login = () => {
       <label className="label">
         <span className="label-text">Password</span>
       </label>
-      <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+      <input
+                  type={passwordVisible ? 'text' : 'password'}
+                  name="password"
+                  placeholder="password"
+                  className="input input-bordered"
+                  required
+                />
+      <button
+                  type="button"
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                  onClick={handleTogglePassword}
+                >
+                  <span
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
+                    onClick={handleTogglePassword}
+                  >
+                    {passwordVisible ? 'Hide' : 'Unhide'}
+                  </span>
+                </button>
       <label className="label">
         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
       </label>
