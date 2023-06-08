@@ -94,7 +94,7 @@ const Login = () => {
     </div>
   </form>
   <Link to='/registration'>
-  <button className="btn btn-link">Want to buy toys?</button>
+  <button className="btn btn-link">Dont have account?</button>
 
   </Link>
 
