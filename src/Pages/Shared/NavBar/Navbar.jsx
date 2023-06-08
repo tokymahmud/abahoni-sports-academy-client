@@ -1,15 +1,38 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Navbar = () => {
+  const {user,logOut} =useContext(AuthContext);
+    const handleLogOut=() =>{
+        logOut()
+        .then(()=>{})
+        .catch(error=>console.log(error))
+
+
+    }
+
     const navOptions =<>
       <Link to='/'><button className="btn btn-active btn-neutral">Home</button>
 </Link>
       <Link to='/instructors'><button className="btn btn-active btn-neutral">Instructors</button></Link>
       <Link to='/classes'><button className="btn btn-active btn-neutral">Classes</button></Link>
       <Link to='/dashboard'><button className="btn btn-active btn-neutral">Dashboard</button></Link>
+      {
+    user? <>
+    <span>{user.img}
+    <img className="w-10 rounded-full hover:opacity-75" src='https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60'></img>
+    </span> 
+    <button onClick={handleLogOut} className="btn btn-outline">Log Out</button>
+    
+
+    </>
+    :<>
       <Link to='/login'><button className="btn btn-active btn-neutral">Log In</button></Link>
     
+   
+    </>
+ }
       
 
     </>
