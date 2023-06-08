@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
+import UseInstructors from '../../Hooks/UseInstructors';
 
 const Instructors = () => {
-    const [instructors,setinstructors] =useState([]);
-    useEffect(()=>{
-        fetch('instructors.json')
-        .then(res=>res.json())
-        .then(data=>{
-            setinstructors(data)})
-    })
+    const [instructors]=UseInstructors();
+
     return (
-        <div>
+        <div className='p-20 mt-11'>
              <SectionTitle 
             heading="Instructors"
             ></SectionTitle>

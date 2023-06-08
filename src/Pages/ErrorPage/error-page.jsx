@@ -11,7 +11,7 @@ export default function ErrorPage() {
       <p>
         <i className="underline underline-offset-1 text-red-600	font-bold text-2xl">{error.statusText || error.message}</i>
       </p>
-      <img className="align-middle	" src="https://img.freepik.com/free-vector/403-error-forbidden-concept-illustration_114360-5571.jpg?w=740&t=st=1684391510~exp=1684392110~hmac=41c234adcec583e359f9915c6212d36579a1d94acdd8cc27b05b79d0c50e4e0b"></img>
+      <img className="align-middle	" src="https://img.freepik.com/free-vector/error-404-concept-landing-page_52683-18367.jpg?w=996&t=st=1686199284~exp=1686199884~hmac=87e090c717bdc8bef2c1a0108ce3c6ace7fcb7cde9ccd73d5536f07eeee1db2f"></img>
       <Link to="/">      <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Back to Home</button>
 </Link>
     </div>

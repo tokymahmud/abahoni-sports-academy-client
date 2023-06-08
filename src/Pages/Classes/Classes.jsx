@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
+import UseClasses from '../../Hooks/UseClasses';
 
 const Classes = () => {
-    const [classes,setclasses] =useState([]);
-    useEffect(()=>{
-        fetch('classes.json')
-        .then(res=>res.json())
-        .then(data=>{
-            setclasses(data)})
-    })
+  const [classes]=UseClasses();
+
+   
 
     const handleSelectClass = (classItem) => {
         // Logic for handling class selection
@@ -21,7 +18,7 @@ const Classes = () => {
       const isAdminOrInstructor = true; // U
 
     return (
-        <section>
+        <section className='p-20 mt-11'>
         <SectionTitle 
         heading="Classes"
         ></SectionTitle>
