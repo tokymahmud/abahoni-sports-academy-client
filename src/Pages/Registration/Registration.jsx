@@ -3,11 +3,15 @@ import React, { useContext, useState } from 'react';
 import { app } from '../../firebase/firebase.config';
 import { AuthContext } from '../../providers/AuthProvider';
 import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 
 const auth =getAuth(app);
 
 
+
 const Registration = () => {
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    console.log(watch("example"));
     
   const [error, setError] =useState('');
 
@@ -53,7 +57,7 @@ const Registration = () => {
       <h1 className="text-5xl font-bold"> Please Register!</h1>
     </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-      <form onSubmit={handleRegister} className="card-body">
+      <form onSubmit={handleRegister}  className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
