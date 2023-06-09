@@ -63,6 +63,10 @@ import MyClasses from "../Pages/dashboard/MyClasses";
       children:[{
         path:'myclasses',
         element:<MyClasses></MyClasses>
+        },
+      {
+        path:'selectedclasses',
+        element:<SelectedClasses></SelectedClasses>
         }
       ]
     }

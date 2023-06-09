@@ -3,7 +3,7 @@ import React from 'react';
 const MyClasses = () => {
     return (
         <div>
-            <h2>erfewrverv</h2>
+            <h2>my classes</h2>
         </div>
     );
 };

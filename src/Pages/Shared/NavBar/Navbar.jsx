@@ -25,7 +25,6 @@ const Navbar = () => {
     </span> 
     <button onClick={handleLogOut} className="btn btn-outline">Log Out</button>
     <ul>
-    <li><Link to='selectedclasses'>selected classes</Link></li>
 
     </ul>
    
