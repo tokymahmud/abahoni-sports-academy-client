@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
@@ -8,6 +8,10 @@ const Login = () => {
     const [passwordVisible, setPasswordVisible] = useState(false);
 
     const navigate =useNavigate();
+    const location =useLocation();
+
+    const from= location.state?.from?.pathname || '/';
+
     const handleTogglePassword = () => {
         setPasswordVisible(!passwordVisible);
       };
@@ -24,7 +28,7 @@ const Login = () => {
           .then(result=>{
             const loggedUser=result.user;
             console.log(loggedUser)
-            navigate('/')
+            navigate(from,{replace:true});
           })
           .catch(error=>{
             console.log(error)
