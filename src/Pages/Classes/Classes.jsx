@@ -4,12 +4,13 @@ import UseClasses from '../../Hooks/UseClasses';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import UseSclasses from '../../Hooks/UseSclasses';
 
 const Classes = () => {
   const [classes]=UseClasses();
   const{user}=useContext(AuthContext);
+  const [ ,refetch]=UseSclasses();
   const navigate=useNavigate();
-   const {name, image,_id,seats,price,studentsEnrolled,instructor}=classes;
    
 
     const handleSelectClass = (classItem) => {
@@ -28,6 +29,7 @@ const Classes = () => {
           .then(res=>res.json())
           .then(data=>{
             if(data.insertedID){
+              refetch();
               Swal.fire({
                 position: 'top-end',
                 icon: 'success',

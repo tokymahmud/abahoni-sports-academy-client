@@ -17,7 +17,7 @@ const Navbar = () => {
 </Link>
       <Link to='/instructors'><button className="btn btn-active btn-neutral">Instructors</button></Link>
       <Link to='/classes'><button className="btn btn-active btn-neutral">Classes</button></Link>
-      <Link to='/dashboard'><button className="btn btn-active btn-neutral">Dashboard</button></Link>
+      <Link to='/dashboard/myclasses'><button className="btn btn-active btn-neutral">Dashboard</button></Link>
       {
     user? <>
     <span>{user.photoURL}
