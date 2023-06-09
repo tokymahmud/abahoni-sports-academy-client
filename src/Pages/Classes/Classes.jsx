@@ -1,17 +1,59 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 import UseClasses from '../../Hooks/UseClasses';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Classes = () => {
   const [classes]=UseClasses();
-
+  const{user}=useContext(AuthContext);
+  const navigate=useNavigate();
+   const {name, image,_id,seats,price,studentsEnrolled,instructor}=classes;
    
 
     const handleSelectClass = (classItem) => {
-        // Logic for handling class selection
-        // You can implement the desired behavior here
-        // For now, let's log the selected class to the console
-        console.log('Selected Class:', classItem.name);
+      const {name, image,_id,seats,price,studentsEnrolled,instructor}=classItem;
+
+        console.log('Selected Class:', classItem);
+        if(user && user.email){
+          const orderclass={classid: _id,name, image,seats,price,studentsEnrolled,instructor, email:user.email}
+          fetch('http://localhost:5000/sclasses',{
+            method:'POST',
+            headers:{
+              'content-type':'application/json'
+            },
+            body:JSON.stringify(orderclass)
+          })
+          .then(res=>res.json())
+          .then(data=>{
+            if(data.insertedID){
+              Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: `selected`,
+                showConfirmButton: false,
+                timer: 1500
+              })
+            }
+
+          })
+        }
+        else{
+          Swal.fire({
+            title: 'Please login for selecting classes',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Login Now'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              navigate('/login')
+            }
+          })
+
+        }
       };
     
       const isLoggedIn = true; // Update this value based on user login status
@@ -31,7 +73,8 @@ const Classes = () => {
         <p>Available Seats: {classItem.seats-classItem.studentsEnrolled}</p>
         <p>Price: {classItem.price}</p>
         <button
-              disabled={classItem.seats - classItem.studentsEnrolled === 0 || !isLoggedIn || isAdminOrInstructor}
+        // put on the bracket || !isLoggedIn || isAdminOrInstructor
+              disabled={classItem.seats - classItem.studentsEnrolled === 0 }
               onClick={() => handleSelectClass(classItem)}
             >
               Select

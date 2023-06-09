@@ -20,10 +20,15 @@ const Navbar = () => {
       <Link to='/dashboard'><button className="btn btn-active btn-neutral">Dashboard</button></Link>
       {
     user? <>
-    <span>{user.img}
-    <img className="w-10 rounded-full hover:opacity-75" src='https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60'></img>
+    <span>{user.photoURL}
+    <img className="w-10 rounded-full hover:opacity-75" src='https://www.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_11139896.htm#quer=potrait&position=0&from_view=search&track=sph'></img>
     </span> 
     <button onClick={handleLogOut} className="btn btn-outline">Log Out</button>
+    <ul>
+    <li><Link to='selectedclasses'>selected classes</Link></li>
+
+    </ul>
+   
     
 
     </>
