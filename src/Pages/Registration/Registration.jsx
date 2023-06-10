@@ -2,12 +2,15 @@ import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { app } from '../../firebase/firebase.config';
 import { AuthContext } from '../../providers/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
 const auth = getAuth(app);
 
+
 const Registration = () => {
+  const navigate = useNavigate();
+
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   console.log(watch("example"));
 
@@ -23,6 +26,26 @@ const Registration = () => {
   .then(result=>{
     const loggedUser =result.user;
     console.log(loggedUser);
+    const saveUser ={name:data.name,email: data.email}
+    fetch ('http://localhost:5000/users',{
+      method:'POST',
+      headers:{
+        'content-type':'application/json'
+      },
+      body:JSON.stringify(saveUser)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      if(data.insertedId){
+        navigate('/');
+        reset();
+
+
+
+      }
+
+
+    })
 
 
   })}
