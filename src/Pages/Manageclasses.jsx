@@ -5,7 +5,6 @@ const AllClasses = () => {
   const [classes, setClasses] = UseClasses();
 
   const handleApprove = (classId) => {
-    // Update the class status to "approved"
     const updatedClasses = classes.map((item) => {
       if (item._id === classId) {
         return {
@@ -20,7 +19,6 @@ const AllClasses = () => {
   };
 
   const handleDeny = (classId) => {
-    // Update the class status to "denied"
     const updatedClasses = classes.map((item) => {
       if (item._id === classId) {
         return {
@@ -44,7 +42,6 @@ const AllClasses = () => {
       <h2>All Classes</h2>
       <div className="overflow-x-auto">
         <table className="table table-zebra">
-          {/* Head */}
           <thead>
             <tr>
               <th>#</th>
