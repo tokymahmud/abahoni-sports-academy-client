@@ -73,6 +73,28 @@ const AllClasses = () => {
                 <td>{item.price}</td>
                 <td>{item.status}</td>
                 <td>
+                {/* {item.status === 'pending' ? (
+                    <div>
+                      <button
+                        className="btn btn-sm"
+                        onClick={() => handleApprove(item._id)}
+                      >
+                        Approve
+                      </button>
+                      <button
+                        className="btn btn-sm"
+                        onClick={() => handleDeny(item._id)}
+                      >
+                        Deny
+                      </button>
+                      <button
+                        className="btn btn-sm"
+                        onClick={() => handleSendFeedback(item._id)}
+                      >
+                        Send Feedback
+                      </button>
+                    </div>
+                  ) : null} */}
                  
                     <div>
                       <button
