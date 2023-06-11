@@ -1,22 +1,23 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import { useQuery } from '@tanstack/react-query';
+import UseAxiossecure from './UseAxiossecure';
+import UseAuth from './useAuth';
 
-const UseSclasses = () => {
-    const{user}=useContext(AuthContext);
-    const token =localStorage.getItem('access-token');
+const UseSclasses = () => { const { user, loading } = UseAuth();
+// const token = localStorage.getItem('access-token');
+const [axiosSecure] = UseAxiossecure();
+const { refetch, data: cart = [] } = useQuery({
+    queryKey: ['sclasses', user?.email],
+    enabled: !loading,
+    queryFn: async () => {
+        const res = await axiosSecure(`/sclasses?email=${user?.email}`)
+        console.log('res from axios', res)
+        return res.data;
+    },
+})
 
-    const {isLoading,refetch,isError,data:cart=[],error}=useQuery({
-        queryKey:['sclasses',user?.email],
-        queryFn: async()=>{
-            const response =await fetch(`http://localhost:5000/sclasses?email=${user.email}`,{headers:{
-                authorization:`bearer ${token}`
-            }})
-            return response.json();
-
-        },
-    })
-    return[cart,refetch,isLoading];
+return [cart, refetch]
 };
 
 export default UseSclasses;

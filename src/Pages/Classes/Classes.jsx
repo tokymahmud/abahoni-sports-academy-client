@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import UseSclasses from '../../Hooks/UseSclasses';
+import UseAdmin from '../../Hooks/UseAdmin';
 
 const Classes = () => {
   const [classes]=UseClasses();
@@ -59,7 +60,8 @@ const Classes = () => {
       };
     
       const isLoggedIn = true; // Update this value based on user login status
-      const isAdminOrInstructor = true; // U
+      const [isAdmin] =UseAdmin();
+
 
     return (
         <section className='p-20 mt-11'>
@@ -75,8 +77,8 @@ const Classes = () => {
         <p>Available Seats: {classItem.seats-classItem.studentsEnrolled}</p>
         <p>Price: {classItem.price}</p>
         <button
-        // put on the bracket || !isLoggedIn || isAdminOrInstructor
-              disabled={classItem.seats - classItem.studentsEnrolled === 0 }
+        // put on the bracket || !isLoggedIn 
+              disabled={classItem.seats - classItem.studentsEnrolled === 0 || isAdmin}
               onClick={() => handleSelectClass(classItem)}
             >
               Select

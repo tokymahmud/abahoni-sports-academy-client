@@ -46,6 +46,8 @@ const AuthProvider = ({children}) => {
                 .then(data=>{
                     // console.log(data.data.token)
                     localStorage.setItem('access-token',data.data.token)
+                                setloading(false);
+
                 })
 
             }
@@ -53,7 +55,6 @@ const AuthProvider = ({children}) => {
                 localStorage.removeItem('access-token')
             }
            
-            setloading(false);
 
         });
         return()=>{

@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 
 const SelectedClasses = () => {
     const [cart,refetch] =UseSclasses();
+    console.log(cart);
     const total = cart.reduce((sum,item)=>item.price+sum,0)
     const handleDelete=item=>{
         Swal.fire({

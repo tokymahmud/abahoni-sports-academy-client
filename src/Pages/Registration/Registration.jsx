@@ -11,7 +11,7 @@ const auth = getAuth(app);
 const Registration = () => {
   const navigate = useNavigate();
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
   console.log(watch("example"));
 
 

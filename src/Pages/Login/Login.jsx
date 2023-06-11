@@ -97,7 +97,7 @@ const Login = () => {
                   onClick={handleTogglePassword}
                 >
                   <span
-                    className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
+                    className="absolute inset-y-0  right-0 pr-3 flex items-center cursor-pointer hover:bg-red-700"
                     onClick={handleTogglePassword}
                   >
                     {passwordVisible ? 'Hide' : 'Unhide'}
