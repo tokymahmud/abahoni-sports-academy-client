@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import UseSclasses from '../../Hooks/UseSclasses';
 import UseAdmin from '../../Hooks/UseAdmin';
+import UseInstructor from '../../Hooks/UseInstructor';
 
 const Classes = () => {
   const [classes]=UseClasses();
@@ -59,8 +60,8 @@ const Classes = () => {
         }
       };
     
-      const isLoggedIn = true; // Update this value based on user login status
       const [isAdmin] =UseAdmin();
+      const [isInstructor] =UseInstructor();
 
 
     return (
@@ -77,13 +78,12 @@ const Classes = () => {
         <p>Available Seats: {classItem.seats-classItem.studentsEnrolled}</p>
         <p>Price: {classItem.price}</p>
         <button
-        // put on the bracket || !isLoggedIn 
-              disabled={classItem.seats - classItem.studentsEnrolled === 0 || isAdmin}
+              disabled={classItem.seats - classItem.studentsEnrolled === 0 || isAdmin || isInstructor}
               onClick={() => handleSelectClass(classItem)}
             >
               Select
             </button>
-            {!isLoggedIn && <p>Please log in before selecting the course.</p>}
+            {/* {!isLoggedIn && <p>Please log in before selecting the course.</p>} */}
       </div>
     ))}
     </div>

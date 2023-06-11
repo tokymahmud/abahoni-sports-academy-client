@@ -1,6 +1,6 @@
 [
     {
-      "_id": 1,
+      
       "image": "https://img.freepik.com/free-photo/3d-female-yoga-pose-african-landscape-with-sunset-sky_1048-12153.jpg?w=1060&t=st=1686120933~exp=1686121533~hmac=dcf2d9d05fa75fbafb0c932a67ed477d84a92a885376e652ce8d09ec9450333c",
       "name": "Yoga",
       "instructor": "John Smith",
@@ -10,7 +10,7 @@
       "popularity": "popular"
     },
     {
-      "_id": 2,
+      
       "image": "https://img.freepik.com/free-photo/young-healthy-man-athlete-doing-exercise-with-ropes-gym-single-male-model-practicing-hard-training-his-upper-body-concept-healthy-lifestyle-sport-fitness-bodybuilding-wellbeing_155003-27879.jpg?w=996&t=st=1686120964~exp=1686121564~hmac=7204026219a5455a5e1998e6538f1659d3b1456df507ec00a4adfd66b7efaa60",
       "name": "Crossfit",
       "instructor": "Sarah Johnson",
@@ -20,7 +20,7 @@
       "popularity": "not popular"
     },
     {
-      "_id": 3,
+      
       "image": "https://img.freepik.com/free-photo/young-healthy-man-athlete-doing-exercise-with-ropes-gym-single-male-model-practicing-hard-training-his-upper-body-concept-healthy-lifestyle-sport-fitness-bodybuilding-wellbeing_155003-27879.jpg?w=996&t=st=1686120964~exp=1686121564~hmac=7204026219a5455a5e1998e6538f1659d3b1456df507ec00a4adfd66b7efaa60",
       "name": "Pilates",
       "instructor": "Michael Davis",
@@ -30,7 +30,7 @@
       "popularity": "not popular"
     },
     {
-      "_id": 4,
+      
       "image": "https://img.freepik.com/free-photo/dance-time-stylish-men-woman-dancing-hip-hop-bright-clothes-green-background-dance-hall-neon-light_155003-16406.jpg?w=996&t=st=1686121099~exp=1686121699~hmac=ef44070aa218891351d8ef49f936c100f35d3d5ac886db4a0cecf89d69b8c785",
       "name": "Zumba",
       "instructor": "Emily Thompson",
@@ -40,7 +40,7 @@
       "popularity": "popular"
     },
     {
-      "_id": 5,
+      
       "image": "https://img.freepik.com/free-photo/girl-kickboxer_654080-1885.jpg?w=996&t=st=1686120997~exp=1686121597~hmac=d0a3bf5e2282cedcd099313369c79e4e08c3e1704b004aa61896be721a23f037",
       "name": "Kickboxing",
       "instructor": "David Anderson",
@@ -50,7 +50,7 @@
       "popularity": "popular"
     },
     {
-      "_id": 6,
+      
       "image": "https://img.freepik.com/free-photo/male-swimmer-swimming-butterfly-stroke_171337-7613.jpg?w=996&t=st=1686121027~exp=1686121627~hmac=d79efde81f70c9ae1ed296b64273f4550de71473eec21cb0d6a90b729c0806a2",
       "name": "Swimming",
       "instructor": "Jessica Wilson",
@@ -60,7 +60,7 @@
       "popularity": "popular"
     },
     {
-      "_id": 7,
+      
       "image": "https://img.freepik.com/free-photo/pensive-man-riding-down-hill_329181-8688.jpg?w=996&t=st=1686120862~exp=1686121462~hmac=5cb761b616574690eb46695ea9131406747d5bbc6d127477cef1f7f9c173ac3e",
       "name": "Cycling",
       "instructor": "Robert Martinez",
@@ -70,7 +70,7 @@
       "popularity": "popular"
     },
     {
-      "_id": 8,
+      
       "image": "https://img.freepik.com/free-vector/realistic-red-pair-leather-boxing-gloves-with-lacing_88138-295.jpg?w=740&t=st=1686121061~exp=1686121661~hmac=fab6095af335633efef66637df9da87cca630ff8b268423da0e3a8f866495a66",
       "name": "Boxing",
       "instructor": "Michelle Lee",
