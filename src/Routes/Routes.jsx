@@ -13,6 +13,8 @@ import Dashboard from "../Layout/Dashboard";
 import MyClasses from "../Pages/dashboard/MyClasses";
 import PrivateRoute from "./PrivateRoute";
 import AllUsers from "../Pages/dashboard/All Users/AllUsers";
+import Addaclass from "../Pages/Addaclass";
+import Manageclasses from "../Pages/Manageclasses";
   
 
   export const router = createBrowserRouter([
@@ -69,6 +71,22 @@ import AllUsers from "../Pages/dashboard/All Users/AllUsers";
       {
         path:'selectedclasses',
         element:<SelectedClasses></SelectedClasses>
+        },
+      {
+        path:'allusers',
+        element:<AllUsers></AllUsers>
+        },
+      {
+        path:'manageclasses',
+        element:<Manageclasses></Manageclasses>
+        },
+      {
+        path:'allusers',
+        element:<AllUsers></AllUsers>
+        },
+      {
+        path:'addaclass',
+        element:<Addaclass></Addaclass>
         },
       {
         path:'allusers',

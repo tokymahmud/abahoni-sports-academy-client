@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import UseAdmin from '../Hooks/UseAdmin';
+import UseInstructor from '../Hooks/UseInstructor';
 
 const Dashboard = () => {
 
 
 
   const [isAdmin] =UseAdmin();
+  const [isInstructor] =UseInstructor();
     return (
         <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -21,19 +23,23 @@ const Dashboard = () => {
           <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
           <a className="btn btn-ghost normal-case text-xl"><Link to='/'>ABAHONI SPORTS<br></br><span className='text-red-500	'>ACADEMY</span></Link>
 </a>
-           {
-            isAdmin?<>
-              <li><Link to='selectedclasses'>Manage Classes</Link></li>
-            <li><Link to='addclasses'>Add Class</Link></li>
-            <li><Link to='allusers'>Manage Users</Link></li>
-         
-            </>:<>
-            <li><Link to='selectedclasses'>My Selected Classes:</Link></li>
-            <li><Link to='myclasses'>My Enrolled Classes:</Link></li>
-            <li><Link to='/'>Payment history</Link></li>
-            </>
-           }
-              
+{isAdmin ? (
+  <>
+    <li><Link to='manageclasses'>Manage Classes</Link></li>
+    <li><Link to='allusers'>Manage Users</Link></li>
+  </>
+) : isInstructor ? (
+  <>
+    <li><Link to='addaclass'>Add a Class:</Link></li>
+    <li><Link to='myclasses'>My Classes(Instructor):</Link></li>
+  </>
+) : 
+<>
+    <li><Link to='selectedclasses'>Selected Classes:</Link></li>
+    <li><Link to='myclasses'>My Enrolled Classes:</Link></li>
+    <li><Link to='/'>Payment history</Link></li>
+  </>
+}
 
           </ul>
         
