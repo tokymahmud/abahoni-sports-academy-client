@@ -18,7 +18,6 @@ const EnrolledClasses = () => {
     fetchEnrolledClasses();
   }, [axiosSecure]);
 
-  // Calculate the total number of item names
   const totalEnrolled = enrolledClasses.reduce(
     (total, cls) => total + cls.itemNames.length,
     0
