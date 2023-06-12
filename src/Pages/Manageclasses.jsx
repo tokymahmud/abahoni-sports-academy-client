@@ -1,35 +1,49 @@
 import React from 'react';
 import UseClasses from '../Hooks/UseClasses';
+import UseAxiosecure from '../Hooks/UseAxiossecure';
 
-const AllClasses = () => {
+const Manageclasses = () => {
   const [classes, setClasses] = UseClasses();
+  const [axiosSecure] = UseAxiosecure(); 
 
-  const handleApprove = (classId) => {
-    const updatedClasses = classes.map((item) => {
-      if (item._id === classId) {
-        return {
-          ...item,
-          status: 'approved',
-        };
-      }
-      return item;
-    });
+  const handleApprove = async (classId) => {
+    try {
+      const updatedClasses = classes.map((item) => {
+        if (item._id === classId) {
+          return {
+            ...item,
+            status: 'approved',
+          };
+        }
+        return item;
+      });
 
-    setClasses(updatedClasses);
+      setClasses(updatedClasses);
+
+      await axiosSecure.patch(`/classes/${classId}`, { status: 'approved' });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
-  const handleDeny = (classId) => {
-    const updatedClasses = classes.map((item) => {
-      if (item._id === classId) {
-        return {
-          ...item,
-          status: 'denied',
-        };
-      }
-      return item;
-    });
+  const handleDeny = async (classId) => {
+    try {
+      const updatedClasses = classes.map((item) => {
+        if (item._id === classId) {
+          return {
+            ...item,
+            status: 'denied',
+          };
+        }
+        return item;
+      });
 
-    setClasses(updatedClasses);
+      setClasses(updatedClasses);
+
+      await axiosSecure.patch(`/classes/${classId}`, { status: 'denied' });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleSendFeedback = (classId) => {
@@ -39,7 +53,7 @@ const AllClasses = () => {
 
   return (
     <div>
-      <h2>All Classes</h2>
+      <h2>Manage All Classes</h2>
       <div className="overflow-x-auto">
         <table className="table table-zebra">
           <thead>
@@ -127,4 +141,4 @@ const AllClasses = () => {
   );
 };
 
-export default AllClasses;
+export default Manageclasses;

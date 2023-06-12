@@ -1,6 +1,7 @@
 import React from 'react';
 import UseSclasses from '../../Hooks/UseSclasses';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const SelectedClasses = () => {
     const [cart,refetch] =UseSclasses();
@@ -43,8 +44,8 @@ const SelectedClasses = () => {
             <div className='uppercase font-bold flex justify-evenly'>
             <h1>Total Selected classes:{cart.length}</h1>
             <h1>Total Payable:${total}</h1>
-            <button className="btn btn-sm bg-orange-800 text-white">Pay</button>
-
+            <Link to='/dashboard/payment'><button className="btn btn-sm bg-orange-800 text-white">Pay</button>
+</Link>
 
 
             </div>

@@ -17,6 +17,7 @@ import Addaclass from "../Pages/Addaclass";
 import Manageclasses from "../Pages/Manageclasses";
 import AdminRoute from "./AdminRoute";
 import InstructorRoute from "./InstructorRoute";
+import Payment from "../Pages/Payment/Payment";
   
 
   export const router = createBrowserRouter([
@@ -86,6 +87,10 @@ import InstructorRoute from "./InstructorRoute";
       {
         path:'addaclass',
         element:<InstructorRoute><Addaclass></Addaclass></InstructorRoute>
+        },
+      {
+        path:'payment',
+        element:<Payment></Payment>
         },
       
       ]
