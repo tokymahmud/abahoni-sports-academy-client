@@ -5,7 +5,7 @@ const UseInstructors = () => {
     const [loading,setloading] =useState([true]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/instructors')
+        fetch('https://abahoni-sports-academy-server.vercel.app/instructors')
         .then(res=>res.json())
         .then(data=>{
             setinstructors(data);

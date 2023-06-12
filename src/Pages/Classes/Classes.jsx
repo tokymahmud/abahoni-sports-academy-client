@@ -21,7 +21,7 @@ const Classes = () => {
         console.log('Selected Class:', classItem);
         if(user && user.email){
           const orderclass={classid: _id,name, image,seats,price,studentsEnrolled,instructor, email:user.email}
-          fetch('http://localhost:5000/sclasses',{
+          fetch('https://abahoni-sports-academy-server.vercel.app/sclasses',{
             method:'POST',
             headers:{
               'content-type':'application/json'
